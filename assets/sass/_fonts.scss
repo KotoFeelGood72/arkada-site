@@ -1,0 +1,23 @@
+// Bebas Fonts
+
+@include font_face('BebasNeueBold', 'BebasNeueBold', $font_path, 700);
+//
+//
+@include font_face('BebasNeueRegular', 'BebasNeueRegular', $font_path, 400);
+
+
+// Futura Fonts
+
+@include font_face('FuturaNewBook-Reg', 'FuturaNewBook-Reg', $font_path, 400);
+//
+//
+@include font_face('FuturaNewMedium-Reg', 'FuturaNewMedium-Reg', $font_path, 500);
+//
+//
+@include font_face('FuturaNewLight-Reg', 'FuturaNewLight-Reg', $font_path, 300);
+
+
+// Montserrat Fonts
+
+@include font_face('Montserrat-Medium', 'Montserrat-Medium', $font_path, 500);
+

@@ -1,0 +1,58 @@
+// Work item
+
+mixin work_item 
+	.work_item
+		.work_item--img
+			a(href="#")
+				+pic({
+					img: 'i/work',
+					png: true,
+				}) 
+		.work_item--content 
+			a(href="#") НАЗВАНИЕ САЙТА
+			span Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки
+			.work_item--link
+				a(href="#") Подробнее
+
+// Upsell
+mixin upsell
+	section.work_upsell 
+			.section_in 
+				.workUpsell_main 
+					.workUpsell_left 
+						h2 Примеры работ
+						.workUpsell_nav 
+							.btn_slider.btn_nav_left 
+								button 
+									+icon('slide_btn')
+							.btn_slider.btn_nav_right 
+								button 
+									+icon('slide_btn')
+					.workUpsell_slider_w 
+						.upsell_slider.swiper
+							.swiper-wrapper
+								-for(i = 0; i < 12; i++) 
+									.swiper-slide 
+										+work_item
+						.upsell_slider_pag.swiper-pagination
+mixin action 
+	section.action
+		ul.action_air
+			-for(i = 1; i < 3; i++)
+				- var airImg = 'i/home/air_' + i;
+					li.action_air--el
+						+pic({
+							img: `${airImg}`
+						})
+		.section_in
+			.action_main 
+				h6 Форма обратной связи
+				p Оставьте заявку, и мы свяжемся с вами
+				.action_form
+					.action_form--input 
+						input(type="tel" placeholder="+7 (999) 999-99-99")
+					.action_form--btn 
+						button(type="submit") Отправить
+
+// Bread
+	

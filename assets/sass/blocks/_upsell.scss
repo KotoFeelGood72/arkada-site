@@ -1,0 +1,110 @@
+.work_upsell {
+	position: relative;
+	height: 53.6rem;
+	margin-bottom: 14.8rem;
+	&:before {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		background: radial-gradient(50% 50% at 50% 50%, #622B74 0%, rgba(96, 43, 113, 0.52) 28.12%, rgba(0, 0, 0, 0) 100%);
+		content: '';
+		width: 50%;
+		height: 100%;
+		@include z-index(el);
+	}
+}
+.section_in {
+}
+.workUpsell_main {
+	@include flex-start;
+	align-items: flex-start;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+.workUpsell_left {
+	max-width: 30.6rem;
+	h2 {
+		margin-bottom: 4rem;
+	}
+}
+.workUpsell_nav {
+	@include flex-start;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.workUpsell_nav_btn {
+}
+.btn_nav_slider {
+}
+.icon {
+}
+.icon-slide_btn {
+}
+.workUpsell_slider_w {
+	position: absolute;
+	top: 0;
+	right: -10.3rem;
+	@include bp($point_2) {
+		position: relative;
+		max-width: 100%;
+		right: 0;
+	}
+}
+.upsell_slider {
+	max-width: 117.4rem;
+	@include bp($point_2) {
+		max-width: 100%;
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.work_item {
+}
+.work_item--img {
+	picture {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.cover_img {
+}
+.work_item--content {
+}
+.work_item--link {
+}
+
+.btn_nav_left  {
+	margin-right: 4rem;
+}
+.btn_nav_right {
+	transform: rotate(180deg);
+}
+
+.upsell_slider_pag {
+	display: none;
+	@include bp($point_2) {
+		display: block;
+		position: absolute;
+		bottom: -3rem!important;
+		left: 50%!important;
+		transform: translateX(-50%);
+	}
+	.swiper-pagination-bullet {
+		opacity: 1;
+		background-color: $white;
+		opacity: .7;
+		transition: all .3s ease;
+		&-active {
+			background-color: $vio;
+			opacity: 1;
+		}
+	}
+}

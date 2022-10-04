@@ -1,0 +1,66 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Company of the page'}
+block content_block
+	+bread(['Главная'], 'О Нас')
+	section.company 
+		.section_in 
+			.company_main 
+				.company_content 
+					.company_title 
+						h1 О нас
+					.company_txt 
+						p Мы знаем, что такое бизнес и полностью погружаемся в задачу клиента. Специализируясь на разработке сайтов под ключ и продвижении, мы проводим комплексную работу, которая дает гарантированный результат.
+						p Слаженные действия специалистов позволяет максимально настроить всю работу на реализацию поставленных целей и задач.
+					.company_btn.btn-standart 
+						button.trigger_callback Оставить заявку
+				.company_img 
+					+pic({
+						img: 'i/about/about_hero',
+						png: true,
+					})
+	section.companyService 
+		.section_in 
+			.companyService_main 
+				h2 почему мы?
+				ul.companyService_list 
+					-for(i = 0; i < 3; i++)
+						- var companyIcon = 'i/about/icon_' + i;
+							li.companyService_item 
+								.companyService_item_icon 
+									+pic({
+										img: `${companyIcon}`
+									})
+								.companyService_item_title 
+									h3 КРЕАТИВНЫЙ ДИЗАЙН
+								.companyService_item_txt 
+									p Креативный дизайн направлен на то, чтобы поразить воображение потребителей и привлечь их внимание к товарам и услугам.
+	section.companyBlock
+		.section_in 
+			.companyBlock_main 
+				.companyBlock_img 
+					+pic({
+						img: 'i/about/comp',
+						png: true,
+					})
+				.companyBlock_content 
+					h4 наши услуги
+					.companyBlock_content_txt 
+						p Предлагаем широкий спектр услуг для вашего бизнеса, начиная с создания сайта и заканчивая разными вариантами его продвижения.
+						p Специализируемся на разных видах сайта и имеем большой опыт работы в их создании.
+					.companyBlock_content_link 
+						a(href="#") Подробнее
+	section.steps 
+		.section_in 
+			.steps_main 
+				h5 Этапы работы
+				ul.steps_lists 
+					-for(i = 1; i < 4; i++)
+						li.steps_items 
+							span=i 
+							.steps_items_content 
+								h5 ИНТЕРВЬЮ С ЗАКАЗЧИКОМ
+								.stepsItems_content_txt 
+									p Определение целей и задач сайта. Погружение в текущие бизнес-процесс. Определение портретов потенциальных клиентов. Разработка различных сценариев взаимодействия пользователей с сайтом.
+	+upsell

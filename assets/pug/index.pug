@@ -1,0 +1,151 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Home of the page'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_content 
+					.hero_title 
+						h1 Web Studio
+					.hero_subtitle 
+						ul.hero_sub--list 
+							each item in ['Разработка и', 'продвижение', 'сайтов']
+								li=item
+						h2 Arkada
+					.hero_btn--w
+						.bg_btn 
+							button.bg_btn.trigger_callback
+								p Заказать звонок
+						.border_btn
+							a(href="#").border_btn!='В портфолио<span></span>'
+				.hero_img--anim 
+					include templates/notebook
+	section.service 
+		.section_in 
+			.service_main
+				.service_slider--w
+					.service_slider_head 
+						h2 Наши услуги
+						.service_slider--nav 
+							.service_slider--next.btn_slider 
+								+icon('slide_btn')
+							.service_slider--prev.btn_slider 
+								+icon('slide_btn')
+					.service_slider.swiper 
+						.swiper-wrapper
+							-for(i = 1; i < 4; i++)
+								- var srcIcon = 'i/home/serviceIcon_' + i;
+									.swiper-slide 
+										.service_slide--w
+											a(href="#")  
+												.service_slide--icon 
+													+pic({
+														img: `${srcIcon}`,
+														png: true,
+													})
+												.service_slide--content 
+													p Сайт-визитка
+													span 25 000
+				.service_slider--pugination
+	section.quiz 
+		.section_in 
+			.quiz_main 
+				h3 Рассчитайте стоимость сайта
+				.quiz_form 
+					ul.quiz_form--card 
+						-
+							var quizCard = [
+								{
+									num: '1',
+									title: 'Старт',
+									txt: 'Стартуете в бизнесе и только запускаетесь',
+									btn: 'Выбрать этот пакет',
+									mod: 'white',
+									txt_mod: 'white'
+								},
+								{
+									num: '2',
+									title: 'Развитие',
+									txt: 'Есть заказы, но нужно ещё больше!',
+									btn: 'Выбрать этот пакет',
+									mod: 'sea',
+									txt_mod: 'sea'
+								},
+								{
+									num: '3',
+									title: 'Бизнес',
+									txt: 'Сбалансированный пакет услуг для успешного дела',
+									btn: 'Выбрать этот пакет',
+									mod: 'vio',
+									txt_mod: 'vio'
+								},
+							]
+						each item in quizCard
+							li.quiz_card--items 
+									input(type="radio" id=item.mod name="big")
+									label(for=item.mod)
+									.quiz_card--item 
+										.quiz_card--num(class=item.txt_mod)=item.num
+										.quiz_card--content 
+											p=item.title 
+											span=item.txt 
+											button(class=item.mod)=item.btn
+					ul.quiz_form--bottom 
+						li.quiz_bottom--item 
+							.quiz_switch--col
+								.quiz_switch--item
+									input(type="checkbox", name="one" id="one")
+									label(for="one")
+										p Лендинг
+										.quiz_switch--slider
+								.quiz_switch--item
+									input(type="checkbox", name="two" id="two")
+									label(for="two")
+										p Многостраничник
+										.quiz_switch--slider
+						li.quiz_bottom--item 
+							.quiz_item--check 
+								input(type="checkbox" id="yandex")
+								label(for="yandex")
+									p Реклама Яндекс 
+							.quiz_item--check 
+								input(type="checkbox" id="google")
+								label(for="google")
+									p Реклама Google 
+							.quiz_item--check 
+								input(type="checkbox" id="seo")
+								label(for="seo")
+									p SEO продвижение
+						li.quiz_bottom--total 
+							p!='Сумма: <span>100 00</span>'
+							.quiz_btn 
+								button(type="submit") Отправить
+	section.about
+		.section_in 
+			.about_main
+				ul.about_img--w
+					-for(i = 1; i < 4; i++)
+						- var imgSrc = 'i/home/about_' + i
+							li.about_img
+								+pic({
+									img: imgSrc,
+									png: true,
+								})
+				.about_content 
+					h4 О нас
+					.about_txt
+						p Мы знаем, что такое бизнес и полностью погружаемся в задачу клиента. Специализируясь на разработке сайтов под ключ и продвижении, мы проводим комплексную работу, которая дает гарантированный результат.
+						p Слаженные действия специалистов позволяет максимально настроить всю работу на реализацию поставленных целей и задач.
+					.about_btn 
+						a(href="#") Узнать больше
+	section.work 
+		.section_in 
+			.work_main 
+				h5 портфолио
+				ul.work_grid
+					- for(i = 0; i < 3; ++i)
+							li.work_item_w
+								+work_item
+	+action

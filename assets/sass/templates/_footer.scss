@@ -1,0 +1,167 @@
+.footer {
+	width: 100%;
+	min-height: $footer;
+	flex: 0 0 auto;
+
+	font-size: 1rem;
+
+	will-change: transform;
+	@include bp($point_2) {
+		min-height: 30rem;
+	}
+}
+
+.footer {
+	position: relative;
+	&:before {
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url('../../i/vector/footer.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+.section_in {
+}
+.footer_main {
+	padding-top: 17rem;
+	@include flex-space;
+	margin-bottom: 13.7rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		margin-bottom: 6rem;
+		padding-top: 8rem;
+	}
+}
+.footer_menu {
+	margin-right: 25.1rem;
+	@include bp($point_2) {
+		margin-right: 0;
+	}
+}
+.footer_nav--list {
+	@include flex-start;
+	margin-bottom: 8.1rem;
+	@include bp($point_2) {
+		display: none;
+	}
+	li {
+		margin-right: 4rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			font-size: 2.6rem;
+			font-family: $font_1;
+		}
+	}
+}
+.footer_social--list {
+	@include flex-start;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+	li {
+		margin-right: 4rem;
+		@include bp($point_2) {
+			margin-right: 2rem;
+			width: 3rem;
+			height: 3rem;
+		}
+		a {
+			@include bp($point_2) {
+				width: 100%;
+				height: 100%;
+				@include flex-center;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.icon {
+}
+.icon-social_1 {
+}
+.footer_social--icon {
+}
+.icon-social_2 {
+}
+.icon-social_3 {
+}
+.footer_info {
+	address {
+		font-style: normal;
+	}
+}
+.footer_contact--list {
+	@include bp($point_2) {
+		text-align: center;
+	}
+	li {
+		margin-bottom: 3.2rem;
+		font-size: 2.3rem;
+		@include bp($point_2) {
+			margin-bottom: 1rem;
+			font-size: 1.6rem;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:first-child {
+			a {
+				font-size: 2.5rem;
+				@include bp($point_2) {
+					font-size: 1.6rem;
+					line-height: 2rem;
+				}
+			}
+		}
+		a {
+			font-size: 2.3rem;
+			font-family: $font_1;
+			@include bp($point_2) {
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+	}
+}
+.footer_bottom {
+	margin-bottom: 5.6rem;
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+	}
+	ul {
+		@include flex-space;
+		justify-content: flex-end;
+		@include bp($point_2) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		li {
+			font-size: 2.1rem;
+			font-family: $font_fl;
+			opacity: .8;
+			@include bp($point_2) {
+				font-size: 1.4rem;
+				margin-bottom: 0.6rem;
+			}
+
+			&:first-child {
+				margin-right: 26rem;
+				@include bp($point_2) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+.police {
+}

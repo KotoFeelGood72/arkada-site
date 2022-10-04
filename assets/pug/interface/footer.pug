@@ -1,0 +1,52 @@
+footer.footer 
+	.section_in 
+		.footer_main 
+			.footer_menu 
+				ul.footer_nav--list 
+					each item in ['О компании', 'Услуги', 'Акции', 'Портфолио', 'Контакты']
+						li 
+							a(href="#")=item
+				ul.footer_social--list 
+					each item in ['social_1', 'social_2', 'social_3']
+						li 
+							a(href="#")
+								+icon(item, 'footer_social--icon')
+			.footer_info
+				address  
+					ul.footer_contact--list 
+						-
+							var footer = [
+								{
+									link: '8 (988) 353-43-15',
+								},
+								{
+									link: 'arkada.webstudio@yandex.ru',
+								},
+								{
+									txt: 'г. Краснодар, ул. Зиповская, 5Б',
+								},
+							]
+						each item in footer 
+							if item.link 
+								li 
+									a(href="#")=item.link
+							else if item.txt
+								li=item.txt
+		.footer_bottom 
+			ul 
+				-
+					var other = [
+						{
+							txt: '2020 © Arkada Web Studio',
+						},
+						{
+							link: 'Политика конфиденциальности',
+							class: 'police'
+						}
+					]
+				each item in other 
+					if item.txt 
+						li=item.txt 
+					else if item.link 
+						li 
+							a(href="#" class=item.class)=item.link 

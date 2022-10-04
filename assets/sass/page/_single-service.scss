@@ -1,0 +1,81 @@
+.single_service {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -10.4rem;
+		background-image: url('../../i/work/service_hero_bg.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		content: '';
+		width: 129.1rem;
+		height: 91.9rem;
+		@include z-index(el);
+	}
+}
+.section_in {
+}
+.singleService_main {
+	@include flex-start;
+	margin-bottom: 12.8rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		margin-bottom: 5rem;
+		align-items: flex-start;
+	}
+	@include bp($point_6) {
+		// align-items: center;
+	}
+}
+.singleService_main_content {
+	max-width: 48.6rem;
+	margin-right: 14.7rem;
+	@include bp($point_2) {
+		margin-right: 0;
+		order: 2;
+		align-items: flex-start;
+	}
+}
+.singleService_main_title {
+	margin-bottom: 5rem;
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+	}
+	h1 {
+		@include bp($point_2) {
+			font-size: 3rem;
+			line-height: 3.6rem;
+		}
+	}
+}
+.singleService_main_action {
+	@include btn-button;
+}
+.singleService_main_img {
+	width: 55.5rem;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.cover_img {
+}
+.txtBlock {
+}
+.txtBlock_content {
+	margin-bottom: 20rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
+	p, ul, span {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+		font-size: 2.4rem;
+		font-family: $font_fl;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+		}
+	}
+}

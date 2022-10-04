@@ -1,0 +1,31 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Single works of the page'}
+block content_block
+	+bread(['Главная', 'Портфолио'], 'Название сайта')
+	section.single_works
+		.section_in 
+			.single_works--main
+				.single_works--w
+					.single_works--mac
+						+pic({
+							img: 'i/mac',
+							png: true,
+						})
+						.single_works--img
+							a(href="i/single.png") 
+								+pic({
+									img: 'i/single',
+									png: true,
+								})
+					.single_img--bg
+				.single_works--content 
+					h1 Название сайта
+					p.single_works--txt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.single_btn--w 
+						.single_works--link.btn-standart_link 
+							a(href="#") Перейти к сайту 
+						.single_works--btn 
+							button.trigger_callback Оставить заявку

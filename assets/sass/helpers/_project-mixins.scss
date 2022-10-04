@@ -1,0 +1,240 @@
+
+// Сброс стилей input
+@mixin app {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	font-family: $font_1;
+	font-size: $font_size_base;
+}
+
+// Input end
+
+
+// Flex styles
+
+@mixin flex-center {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-col {
+	flex-direction: column;
+}
+
+@mixin flex-start {
+	justify-content: flex-start;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-space {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-end {
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
+}
+
+// End flex styles
+
+// Style default link
+
+
+@mixin link {
+	position: relative;
+	&:before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		content: '';
+		border-bottom: .2rem solid $black;
+		transition: all .3s ease;
+		pointer-events: none;
+	}
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+	&.active {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+
+@mixin nav {
+  position: relative;
+  // &:before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 1.5rem;
+  //   height: .5rem;
+  //   border-radius: 2rem;
+  //   background-color: $sea;
+  //   content: '';
+  //   z-index: -1;
+  //   pointer-events: none;
+  //   opacity: .2;
+  //   transition: all .3s ease;
+  // }
+  // &:after {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 3rem;
+  //   height: 3rem;
+  //   border-radius: 100%;
+  //   background-color: $vio;
+  //   content: '';
+  //   z-index: -1;
+  //   pointer-events: none;
+  //   opacity: .2;
+  //   transition: all .3s ease;
+  // }
+  // &:hover {
+  //   &:before,
+  //   &:after {
+  //     width: 100%;
+  //     transform: rotate(0);
+  //   }
+  // }
+}
+
+@mixin btn-bg {
+	@include bp($point_2) {
+		width: 100%;
+	}
+  a {
+    position: relative;
+    @include flex-center;
+    min-height: 5.9rem;
+    min-width: 22rem;
+    font-size: 2.2rem;
+    font-family: $font_1;
+    color: $white;
+    overflow: hidden;
+    border-radius: 5rem;
+    transition: all .3s ease;
+    border: .1rem solid $vio;
+    background-color: $vio;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			min-height: 5rem;
+			min-width: 100%;
+			padding: 1rem 4rem;
+			text-transform: uppercase;
+		}
+  }
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			a {
+				background-color: transparent;
+			}
+		}
+	}
+
+}
+
+@mixin btn-button {
+  button {
+    @include flex-center;
+		cursor: pointer;
+    position: relative;
+    min-height: 5.9rem;
+    min-width: 22rem;
+    font-size: 2.2rem;
+    font-family: $font_1;
+    color: $white;
+    overflow: hidden;
+    border-radius: 5rem;
+    transition: all .3s ease;
+    border: .1rem solid $vio;
+    background-color: $vio;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			min-height: 5rem;
+			min-width: 100%;
+			padding: 1rem 4rem;
+			text-transform: uppercase;
+		}
+  }
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			button {
+				background-color: transparent;
+			}
+		}
+	}
+
+}
+
+
+@mixin btn-bg--sea {
+  a {
+    @include flex-center;
+    min-height: 5.9rem;
+    min-width: 22rem;
+    font-size: 2.2rem;
+    font-family: $font_1;
+    color: $white;
+    overflow: hidden;
+    border-radius: 5rem;
+    transition: all .3s ease;
+    border: .1rem solid $sea;
+    background-color: $sea;
+    color: $dark;
+  }
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			a {
+				color: $white;
+				background-color: transparent;
+			}
+		}
+	}
+
+}
+
+
+
+@mixin border-btn {
+  a {
+    @include flex-center;
+    min-height: 5.9rem;
+    min-width: 22rem;
+    font-size: 2.2rem;
+    font-family: $font_1;
+    color: $vio;
+    overflow: hidden;
+    border-radius: 5rem;
+    transition: all .3s ease;
+    border: .1rem solid $vio;
+  }
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			a {
+				background-color: $vio;
+				color: $white;
+			}
+		}
+	}
+}

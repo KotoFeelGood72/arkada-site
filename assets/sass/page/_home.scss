@@ -1,0 +1,1139 @@
+.hero {
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 112.6rem;
+    background-image: url('../../i/home/hero.svg');
+    background-size: 100%;
+    z-index: -2;
+    top: -10rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+		
+
+  }
+}
+.section_in {
+}
+.hero_main {
+  @include flex-center;
+	flex-wrap: wrap;
+	margin-bottom: 5rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.hero_content {
+  margin-right: 4.5rem;
+	@include bp($point_2) {
+		max-width: 40rem;
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+.hero_title {
+  h1 {
+    font-size: 15rem;
+    font-family: $font_bb;
+    line-height: 107.5%;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    margin-bottom: 2rem;
+		@include bp($point_2) {
+			font-size: 5rem;
+			line-height: 5.6rem;
+			margin-bottom: 1rem;
+		}
+  }
+}
+.hero_subtitle {
+  @include flex-start;
+  margin-bottom: 9rem;
+	flex-wrap: wrap;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+  h2 {
+    font-size: 16rem;
+    font-family: $font_bb;
+    margin-right: -10rem;
+    line-height: 13.5rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+		@include bp($point_2) {
+			font-size: 5rem;
+			line-height: 5.6rem;
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+  }
+}
+.hero_sub--list {
+  border-right: .1rem solid $white;
+  padding-right: 1.6rem;
+  margin-right: 2.5rem;
+	@include bp($point_2) {
+		@include flex-center;
+		border: none;
+		order: 2;
+		width: 100%;
+		justify-content: center;
+	}
+	@include bp($point_4) {
+		flex-direction: column;
+	}
+  li {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-family: $font_fl;
+    @include flex-start;
+    justify-content: flex-end;
+		@include bp($point_2) {
+			justify-content: center;
+			margin-bottom: 0;
+		}
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+		&:last-child {
+			@include bp($point_2) {
+				grid-column: 1 / span 2;
+			}
+		}
+  }
+}
+.hero_btn--w {
+  @include flex-start;
+	@include bp($point_2) {
+		justify-content: center;
+	}
+}
+.hero_btn--w > div:first-child {
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.hero_btn {
+}
+.bg_btn {
+  @include btn-button;
+  margin-right: 2.1rem;
+	@include bp($point_2) {
+		margin-right: 0;
+	}
+}
+.border_btn {
+  @include border-btn;
+	a {
+		@include bp($point_2) {
+			min-height: 5rem;
+		}
+	}
+	// @include bp($point_2) {
+	// 	width: 100%;
+	// }
+}
+
+
+
+//
+.hero_img--anim {
+  margin-right: -10rem;
+	width: 60rem;
+	height: 64.9rem;
+	@include bp($point_2) {
+		display: none;
+	}
+  svg {
+    overflow: hidden;
+  }
+}
+.service {
+}
+.service_main {
+  position: relative;
+  margin-bottom: 11.3rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.service_slider--w {
+}
+.service_slider {
+  // max-width: 99.6rem;
+  margin-bottom: 4.2rem;
+}
+.service_slide--w {
+  background: rgba(31, 33, 37, 0.8);
+  box-shadow: .1rem -.2rem 2rem rgba(12, 11, 12, 0.45);
+  border-radius: 2rem;
+	transform-origin: center;
+	padding: 6rem 3rem 4rem 3rem;
+	transition: all .5s ease;
+	max-height: 39rem;
+} 
+.service_slide--icon {
+	margin: 0 auto;
+  margin-bottom: 5.2rem;
+  color: $sea;
+  position: relative;
+	width: 7.9rem;
+	@include flex-center;
+  transition: all .4s ease;
+	svg {
+		transition: all .4s ease;
+	}
+  &:after {
+    position: absolute;
+    top: -2rem;
+    right: -4rem;
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(85, 236, 253, 0.31) 0%, rgba(85, 236, 253, 0) 100%);
+    content: '';
+    transition: all .3s ease;
+  }
+}
+
+.service_slide--content {
+	text-align: center;
+  p {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    font-family: $font_br;
+    @include bp($point_2) {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+      text-align: center
+    }
+  }
+  span {
+    @include flex-center;
+    position: relative;
+    font-size: 2rem;
+    transition: all .4s ease;
+    &:before {
+      content: 'от';
+      padding-right: 0.5rem;
+    }
+    &:after {
+      content: '₽';
+      padding-left: 0.5rem;
+    }
+  }
+}
+.service_slide--link {
+  @include btn-bg--sea;
+  transition: all .2s ease;
+}
+.icon-service_2 {
+}
+.icon-service_3 {
+}
+.service_slider_head {
+	@include flex-space;
+	margin-bottom: 7.4rem;
+}
+.service_slider--nav {
+  @include flex-space;
+	&>div {
+		&:first-child {
+			margin-right: 4.5rem;
+		}
+		&:last-child {
+			transform: rotate(180deg);
+		}
+	}
+	@include bp($point_2) {
+		display: none;
+	}
+  .swiper-button-disabled {
+    border: .1rem solid $white;
+    svg {
+      color: $white;
+    }
+  }
+}
+.btn_slider {
+  border: .1rem solid $vio;
+  height: 6.6rem;
+  width: 6.6rem;
+  border-radius: 100%;
+  @include flex-center;
+	transition: all .3s ease;
+	cursor: pointer;
+	@include bp($point_2, $direction:min) {
+
+		&:hover {
+			border: .1rem solid $white;
+			svg {
+				color: $white;
+			}
+		}
+	}
+  svg {
+    color: $vio;
+		transition: all .3s ease;
+  }
+}
+.icon-slide_btn {
+}
+.service_slider--pugination {
+  @include flex-center;
+  .swiper-pagination-bullet {
+    width: .9rem;
+    height: .9rem;
+    opacity: 1;
+    background-color: #C4C4C4;
+    margin-right: 2.8rem!important;
+		margin-left: 0!important;
+    transition: all .3s ease;
+    &:last-child {
+      margin-right: 0!important;
+    }
+    &-active {
+      background-color: $vio;
+    }
+  }
+}
+.quiz {
+}
+.quiz_main {
+  h3 {
+    max-width: 60.2rem;
+    margin-bottom: 5.9rem;
+  }
+}
+.quiz_form {
+  margin-bottom: 22.5rem;
+  @include bp($point_2) {
+    margin-bottom: 8rem;
+  }
+}
+.quiz_form--card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 8rem;
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+		margin-bottom: 5rem;
+	}
+	@include bp($point_6) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		margin-bottom: 5rem;
+	}
+    .quiz_card--item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2rem;
+      padding: 4rem 4.5rem;
+      @include flex-start;
+			z-index: 2;
+      align-items: flex-start;
+			@include bp($point_2) {
+				padding: 3rem;
+			}
+  }
+}
+.quiz_card--item {
+}
+.quiz_card--items label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  cursor: pointer;
+}
+.quiz_card--items {
+  position: relative;
+
+	.quiz_card--content {
+		button {
+			min-height: 4rem;
+			min-width: 18.8rem;
+			font-family: $font_1;
+			color: $dark;
+			font-size: 1.7rem;
+			border-radius: 5rem;
+			cursor: pointer;
+			transition: all .3s ease;
+			&.white {
+				background: #C6DBDD;
+				box-shadow: -.4rem .5rem 1.5rem rgba(23, 21, 21, 0.25);
+				color: $dark;
+				border: .1rem solid #C6DBDD;
+			}
+			&.sea {
+				background: $sea;
+				box-shadow: -.4rem .5rem 1.5rem rgba(23, 21, 21, 0.25);
+				color: $dark;
+				border: .1rem solid $sea;
+				button {
+					color: $sea;
+				}
+			}
+			&.vio {
+				background: $vio;
+				box-shadow: -.4rem .5rem 1.5rem rgba(23, 21, 21, 0.25);
+				color: $white;
+				border: .1rem solid $vio;
+			}
+		}
+		span {
+			font-size: 1.9rem;
+			line-height: 2.2rem;
+			@include flex-start;
+			margin-bottom: 3.4rem;
+			@include bp($point_2) {
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+			}
+		}
+		p {
+			font-size: 4.5rem;
+			font-family: $font_br;
+			padding-bottom: 1rem;
+			position: relative;
+			margin-bottom: 1.5rem;
+			@include bp($point_2) {
+				font-size: 3rem;
+				line-height: 3.6rem;
+				z-index: 2;
+			}
+			&:after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				border-bottom: .1rem solid $white;
+				content: '';
+				filter: blur(.4rem);
+			}
+			&:before {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				border-bottom: .1rem solid $white;
+				content: '';
+			}
+		}
+	}
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #1F2125;
+		box-shadow: .1rem .4rem 1.2rem rgba(0, 0, 0, 0.25);
+		content: '';
+		z-index: 0;
+		border-radius: 2rem;
+	}
+  input {
+    display: none;
+    &:checked + label + .quiz_card--item > .quiz_card--num:before {
+      width: 14rem!important;
+      height: 14rem!important;
+    }
+    &:checked + label + .quiz_card--item > .quiz_card--content button.white {
+			box-shadow: 0 0 2.4rem #C6DBDD;
+    }
+		&:checked + label + .quiz_card--item > .quiz_card--content button.sea {
+			box-shadow: 0 0 2.4rem  $sea;
+    }
+		&:checked + label + .quiz_card--item > .quiz_card--content button.vio {
+			box-shadow: 0 0 2.4rem $vio;
+    }
+  }
+}
+.quiz_card--num {
+  font-size: 12rem;
+  line-height: 10.5rem;
+  font-family: $font_m;
+  margin-right: 4.5rem;
+  position: relative;
+  z-index: 2;
+	@include bp($point_2) {
+		position: static;
+	}
+	@include bp($point_2) {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		color: #ffffff1f;
+		z-index: -1;
+	}
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6.8rem;
+    height: 6.9rem;
+    filter: blur(7rem);
+    content: '';
+    z-index: -1;
+    transition: all .3s ease;
+		@include bp($point_2) {
+			display: none;
+		}
+  }
+  &.white {
+    &:before {
+      background-color: #C6DBDD;
+    
+    }
+  }
+  &.sea {
+    &:before {
+      background-color: $sea;
+    }
+  }
+  &.vio {
+    &:before {
+      background-color: $vio;
+    }
+  }
+}
+.quiz_form--bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+		grid-gap: 2rem;
+	}
+	@include bp($point_6) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		grid-gap: 2rem;
+	}
+}
+
+
+.quiz_switch--slider {
+  position: absolute;
+  top: .5rem;
+  left: .3rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: $white;
+  border-radius: 100%;
+  transition: all .3s ease;
+  @include bp($point_2) {
+    top: .3rem;
+		z-index: 11;
+		min-width: 1.8rem;
+		min-height: 1.8rem;
+		display: flex;
+		align-items: center;
+  }
+}
+.quiz_switch--item {
+  margin-bottom: 3rem;
+  overflow: hidden;
+  @include bp($point_2) {
+    margin-bottom: 1.5rem;
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+		display: flex;
+    &:before {
+      position: absolute;
+      top: .3rem;
+      left: 0;
+      content: '';
+      background-color: #515E77;
+      width: 4.1rem;
+      height: 2.2rem;
+      border-radius: 1.8rem;
+      z-index: -3;
+      transition: all .3s ease;
+      @include bp($point_2) {
+        top: .1rem;
+      }
+    }
+  }
+  p {
+    font-size: 2.3rem;
+    font-family: $font_1;
+    padding-left: 6rem;
+    @include bp($point_2) {
+      font-size: 1.8rem;
+    }
+  }
+  input {
+    display: none;
+    &:checked + label:before {
+      background-color: $vio;
+    }
+    &:checked ~ label .quiz_switch--slider {
+      left: 2rem;
+    }
+  }
+}
+
+.quiz_item--check {
+  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  font-family: $font_1;
+  position: relative;
+  @include flex-start;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+  }
+  label {
+    padding-left: 5.9rem;
+    @include bp($point_2) {
+      padding-left: 4rem;
+    }
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      top: .2rem;
+      left: 0;
+      content: '';
+      width: 2.9rem;
+      height: 2.9rem;
+      background-color: #515E77;
+      border-radius: 0.5rem;
+      box-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.25);
+      @include bp($point_2) {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 0;
+      }
+    }
+    &:after {
+      position: absolute;
+      top: 1rem;
+      left: .6rem;
+      content: '';
+      width: 1.9rem;
+      height: 1.3rem;
+      background-image: url('../../i/vector/check.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: scale(0);
+      transition: all .3s ease;
+      @include bp($point_2) {
+        width: 1.7rem;
+        top: .6rem;
+        left: .4rem;
+      }
+    }
+  }
+  input {
+    display: none;
+    &:checked + label:after  {
+      transform: scale(1);
+    }
+  }
+}
+.quiz_bottom--total {
+  p {
+    margin-bottom: 2.9rem;
+    font-size: 3.7rem;
+    font-family: $font_bb;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: .4rem;
+    @include bp($point_2) {
+      font-size: 2.3rem;
+    }
+    &:after {
+      content: 'РУБ.';
+      padding-left: 1rem;
+      font-family: $font_bb;
+      text-transform: uppercase;
+    }
+  }
+}
+.quiz_btn {
+  button {
+    border: .1rem solid $sea;
+    min-height: 4.6rem;
+    min-width: 18.6rem;
+    font-size: 2.2rem;
+    color: $white;
+    font-family: $font_1;
+    border-radius: 15rem;
+    cursor: pointer;
+    transition: all .3s ease;
+		@include bp($point_2) {
+			// min-width: 100%;
+			min-height: 5.5rem;
+		}
+		@include bp($point_6) {
+			min-width: 100%;
+			// min-height: 5.5rem;
+		}
+		@include bp($point_2, $direction:min) {
+
+			&:hover {
+				background-color: $sea;
+				color: $dark;
+		}
+    }
+  }
+}
+.about {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    top: -17.4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../i/vector/about_left.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 140.9rem;
+    z-index: -1;
+		@include bp($point_2) {
+			display: none;
+		}
+  }
+  &:after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    top: 23.9rem;
+    right: 0;
+    width: 28.3rem;
+    height: 100%;
+    background-image: url('../../i/vector/about_right.svg');
+    background-repeat: no-repeat;
+		background-size: contain;
+		@include bp($point_2) {
+			display: none
+		}
+  }
+}
+.about_main {
+  @include flex-start;
+  margin-bottom: 17.4rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.about_img--w {
+  @include flex-start;
+  flex-wrap: wrap;
+  margin-right: 17rem;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.about_img--1 {
+  animation: 25s imgRotate linear infinite;
+	@include bp($point_2) {
+		display: none
+	}
+}
+.about_img--2 {
+  animation: 25s imgRotate linear infinite;
+	@include bp($point_2) {
+		display: none
+	}
+}
+.about_img--3 {
+  animation: 25s imgRotate linear infinite;
+	@include bp($point_2) {
+		display: none
+	}
+}
+
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about_content {
+  max-width: 60.3rem;
+	@include bp($point_2) {
+		max-width: 80%;
+	}
+  h4 {
+    margin-bottom: 3.9rem;
+  }
+}
+.about_txt {
+  margin-bottom: 7.1rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
+  p {
+    font-size: 2.4rem;
+    font-family: $font_1;
+    margin-bottom: 3rem;
+		@include bp($point_2) {
+			font-size: 1.8rem;
+		}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.about_btn {
+  @include btn-bg;
+  display: inline-flex;
+	@include bp($point_2) {
+		display: inline-flex;
+		width: auto;
+	}
+}
+.work {
+}
+.work_main {
+  h5 {
+    margin-bottom: 6rem;
+
+		@include bp($point_2) {
+			margin-bottom: 3rem;
+		}
+  }
+}
+.work_grid {
+  display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(35.8rem, 1fr));
+  grid-gap: 6.4rem;
+  margin-bottom: 15rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+		grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+		grid-gap: 2rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 4rem;
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		grid-gap: 2rem;
+	}
+}
+.work_item {
+  border-radius: 1.5rem;
+  padding: 3.8rem 0 3.3rem 0;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 1.6rem;
+    left: 2.1rem;
+    content: '';
+    width: 2.5rem;
+    height: .5rem;
+    background-image: url('../../i/vector/dots.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #1F2125;
+    z-index: -1;
+  }
+}
+.work_item--img {
+  height: 21.6rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  a {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.work_item--content {
+  padding: 2rem 3.3rem 0 2rem;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  span {
+    @include flex-center;
+    margin-bottom: 4.8rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    opacity: .9;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+			margin-bottom: 2rem;
+		}
+  }
+  a {
+    font-family: $font_bb;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: $sea;
+    letter-spacing: .2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+		@include bp($point_2) {
+			font-size: 2.4rem;
+			line-height: 2.8rem;
+		}
+    &:before {
+      position: absolute;
+      top: -3.5rem;
+      left: 22%;
+      content: '';
+      width: 12.1rem;
+      height: 12.2rem;
+      background: rgba(106, 208, 219, 0.28);
+      filter: blur(5rem);
+      z-index: -1
+    }
+  }
+}
+.work_item--link {
+  @include btn-bg--sea;
+  display: inline-flex;
+  justify-content: center;
+  a {
+    font-size: 2.3rem;
+    min-height: 4.8rem;
+    min-width: 25.2rem;
+    font-family: $font_1;
+    text-transform: none;
+		@include bp($point_2) {
+			font-size: 1.8rem;
+		}
+    &:before {
+      display: none;
+    }
+  }
+}
+.action {
+  margin-bottom: 20.2rem;
+  position: relative;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.action_air {
+  position: absolute;
+  @include flex-space;
+  width: 100%;
+  height: 100%;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.action_air--el {
+	width: 61.6rem;
+}
+.action_main {
+  border-radius: 3rem;
+  position: relative;
+  @include flex-center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 9.3rem 0 12.7rem 0;
+	@include bp($point_2) {
+		padding: 4rem 2rem;
+		text-align: center;
+	}
+  h6 {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-family: $font_bb;
+    margin-bottom: 1.2rem;
+		@include bp($point_2) {
+			font-size: 3rem;
+			line-height: 3.6rem;
+			text-align: center;
+		}
+  }
+  p {
+    font-size: 2.3rem;
+    font-family: $font_1;
+    margin-bottom: 5.8rem;
+		@include bp($point_2) {
+			margin-bottom: 3rem;
+			font-size: 1.8rem;
+		}
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #1F2125;
+    z-index: -2;
+  }
+  &:after {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(85, 237, 253, 0.12) 0%, rgba(85, 237, 253, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.action_form {
+  @include flex-center;
+  position: relative;
+  min-width: 55.7rem;
+  border-radius: 5rem;
+  overflow: hidden;
+	@include bp($point_2) {
+		min-width: auto;
+		width: 100%;
+		flex-direction: column;
+		border-radius: 0;
+		max-width: 50%;
+
+	}
+	@include bp($point_4) {
+		max-width: 100%;
+	}
+}
+.action_form--input {
+  width: 100%;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+  input {
+    background-color: transparent;
+    background: rgba(80, 82, 87, 0.83);
+    border: none;
+    min-height: 5.3rem;
+    padding: 0 2.7rem;
+    font-size: 2rem;
+    font-family: $font_1;
+    width: 100%;
+    color: $white;
+		@include bp($point_2) {
+			padding: .5rem 2rem;
+			border-radius: 3rem;
+      font-size: 1.6rem;
+		}
+    &::-webkit-input-placeholder {
+      color: #A7A7A7;
+      opacity: 1;
+    }
+  }
+}
+.action_form--btn {
+  position: absolute;
+  right: 0;
+	@include bp($point_2) {
+		position: static;
+		width: 100%;
+	}
+  button {
+    min-height: 5.3rem;
+    min-width: 18.4rem;
+    background-color: $vio;
+    color: $white;
+    font-size: 2.2rem;
+    font-family: $font_1;
+    cursor: pointer;
+    border: .1rem solid $vio;
+    transition: all .3s ease;
+    border-radius: 5rem;
+		@include bp($point_2) {
+			min-width: 100%;
+      font-size: 1.6rem;
+		}
+    &:hover {
+			@include bp($point_2, $direction:min) {
+
+				background-color: transparent;
+			}
+    }
+  }
+}
+
+.bottom_note {
+  animation: 1s linear 1s infinite alternate bottom_note
+}
+.left_top--num {
+  animation: 1s linear .1s infinite alternate loopNum;
+  
+}
+
+.left_tops--num {
+  animation: 1s linear .3s infinite alternate loopNum;
+  z-index: -1;
+  
+}
+.loop_dotss {
+  animation: 1s linear .3s infinite alternate transDotss;
+}
+.loop_dots {
+  animation: 1s linear .1s infinite alternate transDots;
+}
+
+@keyframes transDots {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: .1;
+  }
+  0% {
+    transform: translate(10%, 5%);
+    opacity: 0;
+  }
+}
+@keyframes transDotss {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: .1;
+  }
+  0% {
+    transform: translate(0%, -10%);
+    opacity: 0;
+  }
+}
+
+@keyframes loopNum {
+  0% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bottom_note {
+  20% {
+    transform: translateY(-1rem);
+  }
+  40% {
+    transform: translateY(-2rem);
+  }
+  60% {
+    transform: translateY(-3rem);
+  }
+  80% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(-5rem);
+  }
+}

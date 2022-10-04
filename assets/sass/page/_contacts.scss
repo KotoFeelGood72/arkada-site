@@ -1,0 +1,97 @@
+.contacts {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: -20%;
+		right: -15.2rem;
+		background-image: url('../../i/work/contacts.png');
+		content: '';
+		width: 150.1rem;
+		height: 73.4rem;
+		@include z-index(el);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+.section_in {
+}
+.contacts_main {
+	margin-bottom: 10rem;
+	@include bp($point_2) {
+		margin-bottom: 5rem;
+	}
+	h1 {
+		margin-bottom: 8rem;
+		@include bp($point_2) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+.contacts_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(32.4rem, 1fr));
+	grid-gap: 10rem;
+	margin-bottom: 9rem;
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+		grid-gap: 1rem;
+		margin-bottom: 5rem;
+	}
+	@include bp($point_5) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		grid-gap: 2rem;
+		margin-bottom: 5rem;
+	}
+}
+.contact_item {
+}
+.contact_item_label {
+	p {
+		font-size: 4.5rem;
+		font-family: $font_br;
+		margin-bottom: 2rem;
+		@include bp($point_2) {
+			font-size: 2.4rem;
+		}
+	}
+}
+.contact_item_val {
+	p, a {
+		font-size: 2.4rem;
+		@include bp($point_2) {
+			font-size: 1.8rem;
+		}
+	}
+}
+.contacts_social_list {
+	@include flex-start;
+	flex-wrap: wrap;
+	li {
+		@include bp($point_2) {
+			width: 3.5rem;
+			height: 3.5rem;
+		}
+		a {
+			@include bp($point_2) {
+				width: 100%;
+				height: 100%;
+				@include flex-center;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 4rem;
+			@include bp($point_2) {
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+.icon {
+}
+.icon-social_1 {
+}
+.icon-social_2 {
+}
+.icon-social_3 {
+}

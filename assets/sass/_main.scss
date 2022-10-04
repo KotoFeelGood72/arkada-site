@@ -1,0 +1,81 @@
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+h1 {
+	font-size: 13rem;
+	line-height: 13.9rem;
+	font-family: $font_bb;
+	letter-spacing: .2rem;
+	@include bp($point_2) {
+		font-size: 4rem;
+		line-height: 4.6rem;
+	}
+}
+
+// End
+h2 {
+	font-size: 9.6rem;
+	line-height: 9.6rem;
+	font-family: $font_bb;
+	text-transform: uppercase;
+	@include bp($point_2) {
+		font-size: 3.4rem;
+		line-height: 4rem;
+	}
+}
+// End
+h3 {
+	font-size: 9.6rem;
+	line-height: 9.6rem;
+	font-family: $font_bb;
+	text-transform: uppercase;
+	@include bp($point_2) {
+		font-size: 3.4rem;
+		line-height: 4rem;
+	}
+}
+// End
+h4 {
+	font-size: 9.6rem;
+	line-height: 9.6rem;
+	font-family: $font_bb;
+	text-transform: uppercase;
+	@include bp($point_2) {
+		font-size: 3.4rem;
+		line-height: 4rem;
+	}
+}
+// End
+h5 {
+	font-size: 9.6rem;
+	line-height: 9.6rem;
+	font-family: $font_bb;
+	text-transform: uppercase;
+	@include bp($point_2) {
+		font-size: 3.4rem;
+		line-height: 4rem;
+	}
+}
+// End
+h6 {
+	font-size: 9.6rem;
+	line-height: 9.6rem;
+	font-family: $font_bb;
+	text-transform: uppercase;
+	@include bp($point_2) {
+		font-size: 3.4rem;
+		line-height: 4rem;
+	}
+}
+// End
+
+.btn-standart  {
+	@include btn-button;
+}
+.btn-standart_link {
+	@include btn-bg;
+}

@@ -1,0 +1,18 @@
+header.header
+	.section_in
+		.header_main
+			.header_logo
+				a(href="#")
+					+pic({
+						img: 'i/logo',
+						png: true
+					})
+			nav
+				ul.header_nav 
+					each item in ['Лендинг', 'Сайт-визитка', 'Корпоративный сайт', 'Интернет-магазин', 'Контекстная реклама', 'Seo', 'Smm']
+						li 
+							a(href="#")=item
+			.header_toggle 
+				span
+				span
+				span

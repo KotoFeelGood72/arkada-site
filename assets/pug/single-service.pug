@@ -1,0 +1,26 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Single Service of the page'}
+block content_block
+	+bread(['Главная', 'Услуги'], 'Интернет-магазин')
+	section.single_service 
+		.section_in 
+			.singleService_main 
+				.singleService_main_content 
+					.singleService_main_title 
+						h1 Интернет магазины
+					.singleService_main_action 
+						button.trigger_callback Оставить заявку
+				.singleService_main_img 
+					+pic({
+						img: 'i/work/single_service',
+						png: true,
+					})
+	section.txtBlock 
+		.section_in 
+			.txtBlock_content 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	+upsell

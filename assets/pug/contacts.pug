@@ -1,0 +1,32 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Contacts of the page'}
+block content_block
+	+bread(['Главная'], 'Контакты')
+	section.contacts 
+		.section_in 
+			.contacts_main 
+				h1 Контакты
+				ul.contacts_list
+					-for(i = 0; i < 3; i++)
+						- var label = ['телефон', 'ПОЧТА']
+						- var value = ['+7 (988) 353-43-15', 'arkada.webstudio@yandex.ru']
+							if i !== 2
+								li.contact_item 
+									.contact_item_label 
+										p=label[i]
+									.contact_item_val 
+										a(href="#")=value[i]
+							else
+								li.contact_item 
+									.contact_item_label 
+										p=label[i]
+									.contact_item_val 
+										p=value[i]
+				ul.contacts_social_list 
+					each item in ['social_1', 'social_2', 'social_3']
+						li 
+							a(href="#")
+								+icon(item)
+	+action
